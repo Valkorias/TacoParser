@@ -18,6 +18,7 @@
             if (cells.Length < 3)
             {
                 // Log that and return null
+                logger.LogWarning("Something went wrong, Length was less than 3");
                 // Do not fail if one record parsing fails, return null
                 return null; // TODO Implement
             }
@@ -27,7 +28,7 @@
 
             if (double.TryParse(cells[0], out lat) == false)
             {
-                logger.LogError($" {cells[0]} Bad data.  Wasnt able to parse latitude as double");
+                logger.LogError($" {cells[0]} Bad data, We weren't able to parse latitude as double");
 
             }
 
@@ -36,7 +37,7 @@
 
             if (double.TryParse(cells[1], out longitude) == false)
             {
-                logger.LogError("Bad data.  Wasnt able to parse longitude as double");
+                logger.LogError("Bad data, We weren't able to parse longitude as double");
 
             }
 

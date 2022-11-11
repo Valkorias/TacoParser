@@ -57,7 +57,7 @@ namespace LoggingKata
 
             }
 
-            logger.LogInfo($"{tacoBell1.Name} and {tacoBell2.Name}");
+            logger.LogInfo($"{tacoBell1.Name} and {tacoBell2.Name} are the farthest apart");
         }
     }
 }
